@@ -1,0 +1,129 @@
+/* @charset "UTF-8";
+
+Resetting default margins and paddings
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+Styling header
+.header {
+  background-color: #333; Dark background color
+  color: #fff; White text color
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+Styling logo
+.logo img {
+  width: 100px; Adjust the width of the logo as needed
+  background-color: white;
+}
+
+Styling main navigation
+.main-nav {
+  list-style-type: none;
+  display: flex;
+}
+
+.main-nav li {
+  margin-right: 20px; Adjust spacing between navigation items
+}
+
+.main-nav li a {
+  color: #fff; White text color
+  text-decoration: none;
+  font-size: 16px; Adjust font size as needed
+  
+}
+
+.main-nav li a:hover {
+  color: #ffcc00; Change text color on hover
+}
+ */
+ 
+ 
+ 
+ 
+ 
+ .all-home {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+}
+
+.sys-logo {
+  margin-right: 20px;
+}
+
+.search-bar {
+  position: relative;
+  margin: 0 20px;
+  flex-grow: 1;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+}
+
+.profile-menu {
+  margin-left: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+#content-side-bar-1 {
+  display: flex;
+  align-items: center;
+}
+
+#bar-1,
+#bar-2,
+#bar-3,
+#bar-4,
+#bar-5 {
+  margin-right: 20px;
+}
+
+.custom-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.custom-button:hover {
+  background-color: #555;
+}
+
+.btn-primary {
+  gap: 10px;
+}
+
+.ri-dashboard-horizontal-fill,
+.ri-shopping-cart-2-fill,
+.ri-logout-box-line,
+.ri-login-circle-line {
+  font-size: 24px;
+}

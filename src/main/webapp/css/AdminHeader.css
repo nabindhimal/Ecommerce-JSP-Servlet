@@ -1,0 +1,248 @@
+@charset "UTF-8";
+/*
+.all-home {
+    display: flex;
+    flex-direction: column;
+    margin-top: 85px; Adjust margin-top to accommodate the fixed navbar
+    height: 100%;
+    width: 100%;
+    
+}
+
+.sys-logo img {
+    margin-left: -10px; Move the system logo to the right
+    margin-right: 20px; Add margin to separate logo from menu bar
+    height: 82px;
+    width: 150px;
+}
+
+
+.nav-bar {
+    height: 60px;
+    width: 100%;
+    background-color: #061d3c;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 1px 10px rgba(10, 0, 0, 0.3), 0 0 0px rgba(0, 0, 0, 0.1) inset;
+    font-family: sans-serif;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; Ensure the navbar stays on top
+}
+
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    margin-left: auto; Push menu bar to the right
+}
+
+.nav-bar li {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 16px 10px;
+    cursor: pointer;
+}
+
+.nav-bar li:hover {
+    color: rgb(0, 191, 159);
+}
+
+.search-bar {
+    margin-left: auto;   margin for spacing
+    margin-right: 30px;
+    flex: auto;
+     align-items: center;  Push search bar to the left
+}
+
+.search-input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid white;
+    border-radius: 13px;
+    color: rgb(0, 59, 110);
+    padding: 6px;
+
+
+}
+
+.profile-menu {
+    margin-right: 20px; Push profile menu to the left
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid white;
+    border-radius: 13px;
+    color: aliceblue;
+    padding: 6px;
+    font-size: 20px;
+}
+
+.profile-menu:hover {
+    background-color: white; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    color: black;
+    transition: background-color 0.6s ease, box-shadow 0.5s ease;
+}
+
+
+.profile-menu img {
+    height: 40px;
+    width: 50px;
+}
+
+#menu-bar {
+    border: 1px solid wheat;
+    border-radius: 11px;
+    color: aliceblue;
+    padding: 6px;
+    font-size: 20px;
+}
+
+#menu-bar:hover {
+    background-color: white; 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    color: black;
+    transition: background-color 0.6s ease, box-shadow 0.5s ease;
+}
+
+
+
+
+
+#content-side-bar-1 {
+    background-color: black; Background color of the sidebar
+    padding: 10px; Adjust padding as needed
+    margin:-10px;
+    width:240px;
+    height:625px;
+}
+
+#content-side-bar-1 div {
+    margin-bottom: 10px; Spacing between sidebar items
+}
+ 
+ #content-side-bar .custom-button {
+    display: block;
+    width: 200px;
+    padding: 15px 20px; Adjust padding as needed
+    font-size: 16px; Adjust font size as needed
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px; Adjust border radius as needed
+    background-color: #061d3c; Primary button color
+    color: #ffffff; Text color
+
+}
+
+#content-side-bar a:hover {
+    background-color: #0056b3; 
+}
+
+#bar-1 {
+    padding: 20px; 
+    margin-left:10px;
+    background-color: black; 
+    width:12.5em;
+}
+
+#bar-1 a:hover span {
+    color: #ff0000; 
+}
+
+#bar-1 a:hover i {
+    color: #ff0000; 
+}
+
+#bar-1 a {
+    display: flex; 
+    align-items: center; 
+    text-decoration: none; 
+    color: white; 
+    font-size:20px;
+}
+
+.custom-button.active {
+    background-color: #17a2b8; Change to a different color for the active state
+}
+
+
+ */
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ /* Add custom CSS styles */
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.profile-menu {
+    display: flex;
+    align-items: center;
+}
+
+.profile-menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* Adjustments for logout button */
+.logout-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.logout-button:hover {
+    color: #ff6347; /* Change color on hover */
+}

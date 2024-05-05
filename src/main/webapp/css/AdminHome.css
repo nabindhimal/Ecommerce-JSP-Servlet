@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+
+#home-content {
+	display: flex;
+	flex-direction: column;
+	margin-top: 85px;
+	height: 100%;
+	width: 100%;
+}
+
+#title-1 {
+	background-color: green;
+	width: 600px;
+	height: 10px;
+	font-size: 20px;
+	margin: -500px;
+	margin-left: 440px;
+	margin-bottom: 100px;
+	position: absolute;
+	border-radius: 5px;
+}
+
+
+
