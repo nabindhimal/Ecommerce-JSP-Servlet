@@ -1,129 +1,128 @@
-/* @charset "UTF-8";
+@charset "UTF-8";
 
-Resetting default margins and paddings
+/* Resetting default margin and padding */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-Styling header
-.header {
-  background-color: #333; Dark background color
-  color: #fff; White text color
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+
+
+.links {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-Styling logo
-.logo img {
-  width: 100px; Adjust the width of the logo as needed
-  background-color: white;
+.links:hover {
+    background-color: #0056b3;
 }
 
-Styling main navigation
-.main-nav {
-  list-style-type: none;
-  display: flex;
+
+
+
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
 }
 
-.main-nav li {
-  margin-right: 20px; Adjust spacing between navigation items
-}
-
-.main-nav li a {
-  color: #fff; White text color
-  text-decoration: none;
-  font-size: 16px; Adjust font size as needed
-  
-}
-
-.main-nav li a:hover {
-  color: #ffcc00; Change text color on hover
-}
- */
- 
- 
- 
- 
- 
- .all-home {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+nav {
   background-color: #333;
-  padding: 20px;
+  color: #fff;
 }
 
 .nav-bar {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
 }
 
-.sys-logo {
-  margin-right: 20px;
-}
-
-.search-bar {
-  position: relative;
-  margin: 0 20px;
-  flex-grow: 1;
-}
-
-.search-input {
-  width: 100%;
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-  background-color: #444;
+.nav-bar a {
   color: #fff;
-}
-
-.profile-menu {
-  margin-left: 20px;
-  color: #fff;
-  cursor: pointer;
-}
-
-#content-side-bar-1 {
-  display: flex;
-  align-items: center;
-}
-
-#bar-1,
-#bar-2,
-#bar-3,
-#bar-4,
-#bar-5 {
-  margin-right: 20px;
-}
-
-.custom-button {
-  display: flex;
-  align-items: center;
-  padding: 8px 16px;
-  border-radius: 5px;
-  background-color: #444;
-  color: #fff;
-  font-size: 16px;
   text-decoration: none;
-  border: none;
-  cursor: pointer;
+  padding: 10px;
 }
 
-.custom-button:hover {
+.nav-bar a:hover {
   background-color: #555;
 }
 
-.btn-primary {
-  gap: 10px;
+.search-bar {
+  flex: 1;
+  margin: 0 10px;
 }
 
-.ri-dashboard-horizontal-fill,
-.ri-shopping-cart-2-fill,
-.ri-logout-box-line,
-.ri-login-circle-line {
-  font-size: 24px;
+.search-bar form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.cart-button, .about-button, .order-button, .profile-menu, .logout-button {
+  position: relative;
+}
+
+.cart-button i, .about-button i, .order-button i, .profile-menu i, .logout-button i {
+  margin-right: 5px;
+}
+
+.profile-menu a {
+  display: flex;
+  align-items: center;
+}
+
+.profile-menu a:hover::after {
+  content: "▼";
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  background-color: #333;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.profile-menu a:hover::after {
+  display: inline-block;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-bar {
+    margin: 10px 0;
+  }
+  
+  .nav-bar a, .search-bar button {
+    padding: 10px;
+  }
 }

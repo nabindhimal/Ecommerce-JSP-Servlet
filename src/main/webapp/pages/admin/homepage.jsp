@@ -1,103 +1,31 @@
-<%-- <%@page import="model.User"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Homepage</title>
-</head>
-<body>
 
-<%
-    // Check if the user is logged in
-    User userObj = (User) session.getAttribute("loggedUser");
-    if (userObj == null) {
-        response.sendRedirect(request.getContextPath() + "/access_error.jsp"); // Redirect to access error page
-    } else {
-        User user = (User) userObj;
-        if (!"admin".equals(user.getUserName()) || !"admin@admin.com".equals(user.getEmail())) {
-            response.sendRedirect(request.getContextPath() + "/access_error.jsp"); // Redirect to access error page
-        }
-    }
-%>
-
-<h2>Welcome, Admin!</h2>
-
-<!-- Add Product Button -->
-<a href="add_product.jsp">Add Product</a>
-
-</body>
-</html>
-
-
-
-
-
-
+<%@page import="model.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Dashboard - Homepage</title>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
 </head>
 <body>
-    <h1>Welcome to the admin dashboard!</h1>
-    <jsp:include page="admin_navbar.jsp" />
-    <!-- Add the rest of the content for the admin homepage here -->
-</body>
-</html>
- --%>
- 
- 
- 
- 
- 
- 
- 
- <%@page import="model.User"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" type="text/css" 
-href="${pageContext.request.contextPath}/css/AdminHome.css">
-</head>
-</head>
-<body>
-
-<%
-    // Check if the user is logged in
-    User userObj = (User) session.getAttribute("loggedUser");
-    if (userObj == null) {
-        response.sendRedirect(request.getContextPath() + "/access_error.jsp"); // Redirect to access error page
-    } else {
-        User user = (User) userObj;
-        if (!"admin".equals(user.getUserName()) || !"admin@admin.com".equals(user.getEmail())) {
-            response.sendRedirect(request.getContextPath() + "/access_error.jsp"); // Redirect to access error page
-        }
-    }
-%> 
-
-
-
-
-
-
+	<%
+	// Check if the user is logged in
+	User userObj = (User) session.getAttribute("loggedUser");
+	if (userObj == null) {
+		response.sendRedirect(request.getContextPath() + "/access_error.jsp"); // Redirect to access error page
+	} else {
+		User user = (User) userObj;
+		if (!"admin".equals(user.getUserName()) || !"admin@admin.com".equals(user.getEmail())) {
+			response.sendRedirect(request.getContextPath() + "/access_error.jsp"); // Redirect to access error page
+		}
+	}
+	%>
 
 	<jsp:include page="AdminHeader.jsp"></jsp:include>
 
-	<div id="home-content">
-	<main>
-		<div id="title-1">
-			<h1>Welcome to admin dashboard !!</h1>
-		</div>
-		</main>
-	</div>
+	<h1 style="color: green; font-size: 24px; text-align: center;">Welcome
+		to admin dashboard !!</h1>
 </body>
 </html>
 

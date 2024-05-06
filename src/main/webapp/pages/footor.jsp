@@ -4,7 +4,6 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Footer</title>
 <link rel="stylesheet" type="text/css" 
 href="${pageContext.request.contextPath}/css/footor.css">
 </head>
@@ -19,7 +18,7 @@ href="${pageContext.request.contextPath}/css/footor.css">
         </ul>
       </div>
       <div class="footer-copyright">
-        <p>&copy; 2023 Ecommerce Site. All rights reserved.</p>
+        <p>&copy; 2023 Elite Screens. All rights reserved.</p>
       </div>
     </div>
   </footer>

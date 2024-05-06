@@ -1,3 +1,4 @@
+
 <%@ include file="AdminHeader.jsp"%>
 <%@ page import="java.util.ArrayList"%>
 <%@ page import="java.util.List"%>
@@ -11,7 +12,8 @@
 <html>
 <head>
 <title>ViewProduct</title>
-<link rel="stylesheet" type="text/css" href="../../css/homepage.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/homepage.css">
+
 </head>
 <body>
 
@@ -35,18 +37,19 @@
 	OrderDao dao = new OrderDao(ConnectionProvider.getConnection());
 	List<Order> orderList = dao.getOrdersForAdmin();
 	%>
-	<ul>
+	<ul class="prd">
 
 
 		<%
 		float totalSubtotal = 0.0f;
 		for (Order orderItem : orderList) {
 			Product product = dao.getProductById(orderItem.getProductID());
-			float totalPrice = orderItem.getQuantity() * product.getPrice();
-			totalSubtotal += totalPrice;
+			if (product != null) { // Add null check for the product object
+				float totalPrice = orderItem.getQuantity() * product.getPrice();
+				totalSubtotal += totalPrice;
 		%>
 
-		<li><img src="../../images/<%=product.getProductImage()%>"
+		<li class="prdl"><img src="../../images/<%=product.getProductImage()%>"
 			alt="<%=product.getName()%>">
 			<h2><%=product.getName()%></h2> <br>
 			<p>
@@ -64,21 +67,16 @@
 				<%=orderItem.getStatus()%>
 			</p>
 			<form action="<%=request.getContextPath()%>/DeliverServlet"
-			method="post" style="display: inline;">
-			<input type="hidden" name="productCode"
-				value="<%=orderItem.getProductID()%>"> <input type="hidden"
-				name="email" value="<%=orderItem.getUserID()%>"> <input
-				type="submit" value="Deliver">
-		</form>
-			
-			
-			</li>
-
-		
-
+				method="post" style="display: inline;">
+				<input type="hidden" name="productCode"
+					value="<%=orderItem.getProductID()%>"> <input type="hidden"
+					name="email" value="<%=orderItem.getUserID()%>"> <input
+					type="submit" value="Deliver">
+			</form></li>
 
 		<%
-		}
+		} // End of if statement for null check
+		} // End of for loop
 		%>
 
 		<p>
@@ -91,4 +89,3 @@
 
 </body>
 </html>
-

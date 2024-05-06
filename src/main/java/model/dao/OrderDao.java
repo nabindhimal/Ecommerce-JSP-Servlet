@@ -43,31 +43,6 @@ public class OrderDao {
 		return cart;
 	}
 
-//	public int placeOrders(Cart cart) {
-//		if (cart == null) {
-//			return 0;
-//		}
-//
-//		int rowsAffected = 0;
-//		String email = cart.getUserID();
-//		String code = cart.getProductID();
-//		int quantity = cart.getQuantity();
-//
-//		try {
-//			// add the product to the orders table
-//			String insertOrderQuery = "INSERT INTO orders (userId, productId, quantity) VALUES (?, ?, ?)";
-//			PreparedStatement insertOrderStmt = this.con.prepareStatement(insertOrderQuery);
-//			insertOrderStmt.setString(1, email);
-//			insertOrderStmt.setString(2, code);
-//			insertOrderStmt.setInt(3, quantity);
-//			rowsAffected = insertOrderStmt.executeUpdate();
-//
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//		return rowsAffected;
-//	}
 
 	public int placeOrders(Cart cart) {
 	    if (cart == null) {

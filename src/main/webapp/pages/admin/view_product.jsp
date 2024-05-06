@@ -10,7 +10,8 @@
 <html>
 <head>
 	<title>ViewProduct</title>
-	<link rel="stylesheet" type="text/css" href="../../css/homepage.css">
+	<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/homepage.css">
+	
 </head>
 <body>
 
@@ -35,9 +36,9 @@
 		productList = dao.viewProduct();
 		request.setAttribute("productList", productList);
 	%>
-	<ul>
+	<ul class="prd">
 		<c:forEach var="product" items="${productList}">
-			<li>
+			<li class="prdl">
 				<img src="../../images/${product.productImage}" alt="${product.name}">
 				<h2>${product.name}</h2>
 				<br>

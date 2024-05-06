@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-/* productList.css */
-
-/* Overall page styling */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -15,41 +12,51 @@ body {
   margin: 0 auto;
 }
 
+
+
+.content-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow-y: auto;
+}
+
 h1 {
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 30px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #333;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+.prd {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
- li {
-  background-color: #fff;
-  margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-} 
+.prdl {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 img {
-  max-width: 100px;
-  max-height: 100px;
-  margin-right: 20px;
-  float: left;
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
 }
 
 h2 {
-  margin-top: 0;
+    margin-top: 0;
+    color: #333;
 }
 
-a {
-  color: #007bff;
-  text-decoration: none;
+p {
+    margin: 5px 0;
+    color: #666;
 }
 
-a:hover {
-  text-decoration: underline;
-}
+
