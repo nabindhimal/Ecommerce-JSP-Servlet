@@ -47,28 +47,25 @@ public class AddToCartServlet extends HttpServlet {
 	    User loggedUser = (User) session.getAttribute("loggedUser");
 	    
 	    if (loggedUser == null) {
-	        // User is not logged in, handle the case accordingly
+	        // User is not logged in.
 	        response.sendRedirect(request.getContextPath() + "/login.jsp");
 	        return; // Stop further execution
 	    }
 
 	    String email = loggedUser.getEmail(); // Assuming getEmail() returns the user's email
 
-	    // Instantiate your CartDao and call the addToCart method
+	    // Instantiate CartDao and call the addToCart method
 	    CartDao cartDao = new CartDao(ConnectionProvider.getConnection());
 	    int rowsAffected = cartDao.addToCart(email, code, quantity);
 
 	    if (rowsAffected > 0) {
 	        // Product added to cart successfully
-	        // Redirect the user to a success page or show a success message
 	        response.sendRedirect(request.getContextPath() + "/success.jsp?message=Product successfully added to cart.");
 	    } else if (rowsAffected == 0) {
 	        // Product addition failed
-	        // Redirect the user to an error page or show an error message
 	        response.sendRedirect(request.getContextPath() + "/error.jsp");
 	    } else {
 	        // Product does not exist or required quantity is not available
-	        // Redirect the user to an out of stock page or show an appropriate message
 	        response.sendRedirect(request.getContextPath() + "/error.jsp?message=Product is out of stock.");
 	    }
 	}

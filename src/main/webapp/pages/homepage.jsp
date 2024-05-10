@@ -37,9 +37,6 @@
 	</div>
 	<%@ include file="footor.jsp"%>
 </body>
-
-
-
 </html>
 
 

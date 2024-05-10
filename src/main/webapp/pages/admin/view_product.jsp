@@ -29,7 +29,7 @@
 %> 
 
 
-	<h1>Home Page</h1>
+	<h1>Products Page</h1>
 	<%
 		ProductDao dao = new ProductDao(ConnectionProvider.getConnection());
 		List<Product> productList = new ArrayList<>();
@@ -49,7 +49,6 @@
 				<p>Description: ${product.description}</p>
 				<p>Stock: ${product.stock}</p>
 				<p>Type: ${product.type}</p>
-				<%-- <a href="productDetails.jsp?code=${product.code}">View Details</a> --%>
 			</li>
 		</c:forEach>
 	</ul>

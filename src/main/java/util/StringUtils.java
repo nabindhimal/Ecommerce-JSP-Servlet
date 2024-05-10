@@ -1,6 +1,9 @@
 package util;
 
 public class StringUtils {
+	// upload dir
+	
+	public static final String UPLOAD_DIR = "/home/mennnk/eclipse-workspace/EliteScreens/src/main/webapp/images/";
 	
 	// Start SQL Queries
 	public static final String INSERT_USER = "INSERT INTO users "

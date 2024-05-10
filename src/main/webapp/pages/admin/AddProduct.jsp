@@ -7,7 +7,8 @@
 <head>
 <meta charset="UTF-8">
 <title>Add Product</title>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/addProduct.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/addProduct.css">
 
 </head>
 
@@ -27,7 +28,7 @@ if (userObj == null) {
 	<jsp:include page="AdminHeader.jsp"></jsp:include>
 	<main>
 		<h2 style="text-align: center;">Add Product</h2>
-	
+
 
 		<form action="${pageContext.request.contextPath}/AddProductServlet"
 			method="post" enctype="multipart/form-data">

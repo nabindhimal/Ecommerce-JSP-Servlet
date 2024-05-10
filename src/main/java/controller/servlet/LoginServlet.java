@@ -40,8 +40,6 @@ public class LoginServlet extends HttpServlet {
 		} else {
 			HttpSession session = request.getSession();
 			session.setAttribute("loggedUser", user);
-//			session.setAttribute("username", user.getUserName());
-
 			session.setMaxInactiveInterval(30*3);
 			
 			Cookie userCookie = new Cookie("user", user.getUserName());

@@ -11,7 +11,7 @@ String contextPath = request.getContextPath();
 /* String url = protocol + "://" + serverName + (portNumber == 80 || portNumber == 443 ? "" : ":" + portNumber)
 		+ contextPath; */
 String url = protocol + "://" + serverName + (portNumber == 80 || portNumber == 443 ? "" : ":" + portNumber)
-+ contextPath + "/pages/homepage.jsp";
+		+ contextPath + "/pages/homepage.jsp";
 %>
 
 <!DOCTYPE html>

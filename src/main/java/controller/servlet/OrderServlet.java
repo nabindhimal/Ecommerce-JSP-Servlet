@@ -49,12 +49,12 @@ public class OrderServlet extends HttpServlet {
 	    User loggedUser = (User) session.getAttribute("loggedUser");
 	    
 	    if (loggedUser == null) {
-	        // User is not logged in, handle the case accordingly
+	        // User is not logged in.
 	        response.sendRedirect(request.getContextPath() + "/login.jsp");
 	        return; // Stop further execution
 	    }
 
-	    String email = loggedUser.getEmail(); // Assuming getEmail() returns the user's email
+	    String email = loggedUser.getEmail();
 
 	    OrderDao dao = new OrderDao(ConnectionProvider.getConnection());
 	    Cart cart = dao.getCart(email, code);

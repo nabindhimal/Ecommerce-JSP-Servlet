@@ -40,7 +40,8 @@
 				totalSubtotal += totalPrice;
 		%>
 
-		<li class="prdl"><img src="../images/<%=product.getProductImage()%>"
+		<li class="prdl"><img
+			src="../images/<%=product.getProductImage()%>"
 			alt="<%=product.getName()%>">
 			<h2><%=product.getName()%></h2> <br>
 			<p>

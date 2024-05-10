@@ -15,7 +15,7 @@ String url = protocol + "://" + serverName + (portNumber == 80 || portNumber == 
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page</title>
+<title>Success Page</title>
 <link rel="stylesheet" type="text/css"
 	href="${pageContext.request.contextPath}/css/url_error.css">
 </head>
@@ -26,12 +26,14 @@ String url = protocol + "://" + serverName + (portNumber == 80 || portNumber == 
         String message = request.getParameter("message");
         if (message != null && !message.isEmpty()) {
     %>
-            <p>Message: <%= message %></p>
-    <%
+	<p>
+		Message:
+		<%= message %></p>
+	<%
         } else {
     %>
-            <p>No message provided.</p>
-    <%
+	<p>No message provided.</p>
+	<%
         }
     %>
 	<button onclick="window.location.href='<%=url%>'">Go to

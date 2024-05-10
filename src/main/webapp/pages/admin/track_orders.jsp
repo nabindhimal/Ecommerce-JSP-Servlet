@@ -12,7 +12,8 @@
 <html>
 <head>
 <title>ViewProduct</title>
-<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/homepage.css">
+<link rel="stylesheet" type="text/css"
+	href="${pageContext.request.contextPath}/css/homepage.css">
 
 </head>
 <body>
@@ -49,7 +50,8 @@
 				totalSubtotal += totalPrice;
 		%>
 
-		<li class="prdl"><img src="../../images/<%=product.getProductImage()%>"
+		<li class="prdl"><img
+			src="../../images/<%=product.getProductImage()%>"
 			alt="<%=product.getName()%>">
 			<h2><%=product.getName()%></h2> <br>
 			<p>
@@ -75,7 +77,7 @@
 			</form></li>
 
 		<%
-		} // End of if statement for null check
+		} 
 		} // End of for loop
 		%>
 
