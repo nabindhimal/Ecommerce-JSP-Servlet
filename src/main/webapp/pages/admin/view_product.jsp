@@ -15,7 +15,7 @@
 </head>
 <body>
 
-<%
+<%-- <%
     // Check if the user is logged in
     userObj = (User) session.getAttribute("loggedUser");
     if (userObj == null) {
@@ -26,7 +26,7 @@
             response.sendRedirect(request.getContextPath() + "/access_error.jsp"); // Redirect to access error page
         }
     }
-%> 
+%>  --%>
 
 
 	<h1>Products Page</h1>
